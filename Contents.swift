@@ -78,8 +78,6 @@ func sumEvenFromOne(targetEndNum: Int) -> Int {
     for counter in 1...targetEndNum {
         if counter.isMultiple(of: 2) {
             sum += counter
-        } else {
-            sum += 0
         }
     }
     return sum
@@ -91,10 +89,11 @@ func sumFizzBuzz(targetEndNum: Int) -> Int {
     var sum = 0
     for counter in 1...targetEndNum {
         if counter.isMultiple(of: 3) && counter.isMultiple(of: 5) {
-            sum += counter
+            continue
         }
         if counter.isMultiple(of: 3) {
             sum += counter
+            continue
         }
         if counter.isMultiple(of: 5) {
             sum += counter
@@ -112,6 +111,7 @@ func isPrime(num: Int) -> Bool {
         } else {
             isPrime = true
         }
+    // increment i in a loop
     return isPrime
 }
 
